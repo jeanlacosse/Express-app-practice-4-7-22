@@ -36,4 +36,10 @@ console.log(`you are now in subreddit ${subreddit}`);
     })
     // above uses params to create object which can be set into a variable
 
+    app.get('/search', (req, res) => {
+      res.send('HI');
+  console.log(req.query);
+      })
+      // used for query objects after ?
+
     
