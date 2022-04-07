@@ -30,3 +30,10 @@ app.post('/cats’', (req, res) => {
   })
   //used to send a post/form or something similar
   
+  app.get('/r/:subreddit', (req, res) => {
+    cosnt { subreddit } = req.params;
+console.log(`you are now in subreddit ${subreddit}`);
+    })
+    // above uses params to create object which can be set into a variable
+
+    
