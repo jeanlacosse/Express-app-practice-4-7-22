@@ -8,7 +8,25 @@ app.listen(3000, () => { // arg is port #
   }) // server is actively listening
       
 
-  app.use(() => {
-    console.log('Received new request!')
-    }) // method to show all requests coming in on console, happens if I reload localhost:3000
+  // app.use((req, res) => {
+  //   console.log('Received new request!');
+  //   res.send('Here is your http response')
+  //   }) 
+  // method to show all requests coming in on console, happens if I reload localhost:3000
     // ^ everythign I need to start first server
+
+    app.get('/cats', (req, res) => {
+      console.log('meow, cat request')
+      res.send('meow');
+    } 
+      // comment out res.send above to prevent that from stopping the app.get
+app.get('/', (req, res) => {
+  res.send('This is homepage')
+})
+//this is called root-route, pretty much the homepage
+
+app.post('/cats’', (req, res) => {
+  res.send('Post request to /cats! not a get request');
+  })
+  //used to send a post/form or something similar
+  
