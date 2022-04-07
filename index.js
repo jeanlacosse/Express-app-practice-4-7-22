@@ -11,4 +11,4 @@ app.listen(3000, () => { // arg is port #
   app.use(() => {
     console.log('Received new request!')
     }) // method to show all requests coming in on console, happens if I reload localhost:3000
-    
+    // ^ everythign I need to start first server
